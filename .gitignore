@@ -1,0 +1,31 @@
+# osx noise
+.DS_Store
+profile
+# xcode noise
+*.mode1
+*.mode1v3
+*.mode2v3
+*.perspective
+*.perspectivev3
+*.pbxuser
+*.xcworkspace
+xcuserdata
+# svn & cvs
+.svn
+CVS
+craft/
+craftPlugins/
+craft/storage/backups/
+craft/storage/runtime/
+craft/storage/userphotos/
+.DS_Store
+.sass-cache
+Desktop.ini
+node_modules
+craftConfig/local/db.php
+craftConfig/license.key
+craftConfig/local/general.php
+_build/bower/bower_components
+!dbs/*.sql
+*.map
+craft

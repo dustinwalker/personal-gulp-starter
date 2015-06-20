@@ -1,0 +1,70 @@
+// Set up based on http://sass-guidelin.es/
+//
+// Where ordering doesn't matter I am using Sass (CSS) Globbing to import all the files in that directory
+// by using the /* import.
+//
+
+// VENDORS
+// And last but not least, most projects will have a vendors/ folder containing all
+// the CSS files from external libraries and frameworks – Normalize, Bootstrap,
+// jQueryUI, FancyCarouselSliderjQueryPowered, and so on. Putting those aside in
+// the same folder is a good way to tell “Hey, this is not from me, not my code,
+// not my responsibility”.
+@import "vendors/bourbon/dist/bourbon"
+@import "vendors/neat/neat"
+
+// VENDOR EXTENSIONS
+// If you have to override a section of any vendor, I recommend you have a 8th folder
+// called vendors-extensions/ in which you may have files named exactly after the vendors
+// They overwrite.
+
+// For instance, vendors-extensions/_boostrap.scss is a file containing all CSS rules
+// intended to re-declare some of Bootstrap default CSS. This is to avoid editing the
+// vendor files themselves, which is generally not a good idea.
+// @import "vendor-extensions/bourbon"
+
+@import "generated/*"
+@import "generated/_spriteMap.scss"
+
+// UTILS FOLDER
+// The utils/ folder gathers all Sass tools and helpers used across the project.
+// Every global variables, functions, mixins and placeholders should be put in there.
+
+// The rule of thumb for this folder is that it should not output a single line of
+// CSS when compiled on its own. This is nothing but Sass helpers.
+@import "utils/*"
+
+// BASE FOLDERS
+// The base/ folder holds what we might call the boilerplate code for the project.
+// In there, you might find the reset file, some typographic rules, and probably
+// a stylesheet (that I use to call _base.scss) defining some standard styles
+// for most used HTML elements.
+@import "base/reset"
+@import "base/typography"
+
+// LAYOUT FOLDERS
+// The layout/ folder contains everything that takes part in laying out the site or
+// application. Could it be stylesheets for the main parts of the site (header, footer,
+// navigation, sidebar…), the grid system or even the CSS styles for all the forms.
+@import "layout/*"
+
+// COMPONENTS
+// For smaller components, there is the components/ folder. While layout/ is macro (defining
+// the global wireframe), components/ is more focused on widgets. It contain all kind of
+// specific modules like a slider, a loader, a widget, or basically anything along those lines.
+// There are usually a lot of files in components/ since the whole site/application should
+// be mostly composed of tiny modules.
+@import "components/*"
+
+
+// PAGES FOLDER
+// If you have page-specific styles, it is better to put them in a pages/ folder, in a file
+// named after the page. For instance, it’s not uncommon to have very specific styles for the
+// home page hence the need for a _home.scss file in pages/.
+@import "pages/*"
+
+// THEMES FOLDER
+// On large sites and applications, it is not unusual to have different themes. There are certainly
+// different ways of dealing with themes but I personally like having them all in a themes/ folder.
+// @import "themes/theme"
+// @import "themes/admin"

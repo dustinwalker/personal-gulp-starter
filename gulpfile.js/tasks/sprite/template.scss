@@ -1,0 +1,6 @@
+/*  DO NOT EDIT DIRECTLY: Automatically generated on {{date}} by svg-sprite. */
+$icons: (
+      sprite: (width: {{spriteWidth}}px, height: {{spriteHeight}}px, pngPath: '/assets/images/sprite-maps/testing.png', svgPath: '/assets/images/sprite-maps/testing.svg'),
+{{#shapes}}
+    {{base}}: (width: {{width.inner}}px, height: {{height.inner}}px, backgroundX: {{position.absolute.x}}px, backgroundY: {{position.absolute.y}}px),
+{{/shapes}});
