@@ -12,6 +12,7 @@ profile
 xcuserdata
 # svn & cvs
 .svn
+.htaccess
 CVS
 craft/
 craftPlugins/
