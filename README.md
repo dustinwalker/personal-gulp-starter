@@ -1,5 +1,13 @@
 Gulp Starter
 ============
+A starting point for my Craft projects and heavily tailored to my work flow. Please use the projects that were the basis of this instead.
+
+# Based on a combination of the following:
+- https://github.com/greypants/gulp-starter/tree/2.0
+- https://www.liquidlight.co.uk/blog/article/creating-svg-sprites-using-gulp-and-sass/
+- https://github.com/BarrelStrength/Craft-Master
+- https://github.com/h5bp/html5-boilerplate
+
 ## Features
 - Browser sync v2 part of default task
 - Combines and includes all requirements using webpack (used at a minimal level)
