@@ -4,7 +4,6 @@ var gulp         = require('gulp'),
     svgo         = require('gulp-svgo'),
     svg2png      = require('gulp-svg2png'),
     handleErrors = require('../../lib/handleErrors'),
-    generateSpriteSass = require('./generateSpriteSass'),
     config       = require('../../config/svgSprite');
 
 gulp.task('svgSprite', function () {
