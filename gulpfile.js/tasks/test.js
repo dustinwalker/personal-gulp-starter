@@ -6,7 +6,7 @@ var gulp            = require('gulp'),
     notify          = require('gulp-notify'),
     csslint         = require('gulp-csslint');
 
-gulp.task('test', function() {
+gulp.task('runtest', function() {
   gulp.src(config.cssSrc)
     .pipe(notify({
         message: "Checking CSS against for potential issues:" + config.cssLintRules
@@ -34,3 +34,5 @@ gulp.task('test', function() {
     .pipe(gulp.dest('./test-results/after'));
 
 });
+
+gulp.task('test', ['runtest'], function() {});
