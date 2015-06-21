@@ -9,6 +9,10 @@ gulp.task('test', function() {
     .pipe(csslint(config.cssLintRules))
     .pipe(csslint.reporter())
     .pipe(uncss({
-        html: config.urls
-    }));
+        html: config.urls,
+        options: {
+            report: true
+        }
+    }))
+    .pipe(gulp.dest('./test-results'));
 });
