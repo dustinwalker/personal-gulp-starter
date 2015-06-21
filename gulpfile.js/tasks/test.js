@@ -4,7 +4,21 @@ var gulp            = require('gulp'),
     uncss           = require('gulp-uncss'),
     cssbeautify     = require('gulp-cssbeautify'),
     notify          = require('gulp-notify'),
-    csslint         = require('gulp-csslint');
+    csslint         = require('gulp-csslint'),
+    csscomb         = require('gulp-csscomb');
+
+gulp.task('sortSass', function() {
+    return gulp.src([config.sassSrc + '/**/*.{sass,scss}', '!' + config.sassSrc + '/vendors/**',  '!' + config.sassSrc + '/utils/**'])
+        .pipe(csscomb())
+        .on('error', handleErrors)
+});
+gulp.task('sort', ['sortSass'], function() {
+    gulp.src(config.cssSrc)
+    .pipe(notify({
+        message: "Sorted selectors into /test-results/sass-sorted/"
+    }))
+    .pipe(gulp.dest('./test-results/sass-sorted/'));
+});
 
 gulp.task('runtest', function() {
   gulp.src(config.cssSrc)
