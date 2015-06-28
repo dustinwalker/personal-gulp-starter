@@ -23,7 +23,8 @@ A starting point for my Craft projects and heavily tailored to my work flow. Ple
 _Note: Unlike the previous starter, in order to perform the clean routine the gulpfile.js folder needs to be in the same directory as the project. Otherwise the force option will need to be used_
 
 ## Must change per project
-- Change ``config.devUrl`` variable to match your dev URL. Found in /gulpfile.js/config/index.js.
+- Copy sample.local.config.js to local.config.js found in /gulpfile.js/config folder.
+- Change ``localconfig.devUrl`` variable to match your dev URL.
 
 ## Configuration
 - Most configuration can be done from the gulpfile.js/index.js file.
