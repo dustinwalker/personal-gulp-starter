@@ -31,3 +31,4 @@ _build/bower/bower_components
 *.map
 craft
 test-results
+gulpfile.js/config/local.config.js

@@ -2,9 +2,10 @@ fs = require('fs')
 json = JSON.parse(fs.readFileSync('package.json', 'utf8'))
 version = json.version
 date = dateFormat (new Date (), "%m-%d-%Y", true)
+localconfig = require('./local.config.js')
 
 var config = {}
-config.devUrl          = 'gulp2b.dev';           // MUST CHANGE THIS to match your local dev
+config.devUrl          = localconfig.devUrl;           // MUST CHANGE THIS to match your local dev
 config.compileTpls     = false;                  // If a Craft or other CMS build set this to false
 config.cmsTpls         = "./craftTemplates";
 config.serverName      = "./public_html";

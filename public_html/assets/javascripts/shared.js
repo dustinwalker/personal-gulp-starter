@@ -1,3 +1,9 @@
+/**
+ * Gulp starter with common tasks and scenarios
+ * @version  v1.0.0 | build date: 06-28-2015
+ * @author   
+ * @link     
+ */
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// install a JSONP callback for chunk loading
 /******/ 	var parentJsonpFunction = window["webpackJsonp"];
