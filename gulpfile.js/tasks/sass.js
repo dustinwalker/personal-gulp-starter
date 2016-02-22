@@ -20,9 +20,8 @@ gulp.task('sass', function () {
     .pipe(sourcemaps.init())
     .pipe(sass(config.settings))
     .on('error', handleErrors)
-    .pipe(sourcemaps.write())
     .pipe(postcss(config.postcss))
-    // .pipe(autoprefixer({ browsers: ['last  version'] }))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest(config.dest))
     .pipe(browserSync.reload({stream:true}));
 });
